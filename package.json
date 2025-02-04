@@ -1,0 +1,40 @@
+{
+  "name": "chromakeyz",
+  "description": "Vite + Svelte + Electron + Tailwind",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently --kill-others \"vite\" \"npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "cross-env DEV_ENV=true electron .",
+    "build": "vite build",
+    "preview": "vite preview",
+    "package": "npm run build && electron-forge package",
+    "make": "npm run build && electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-deb": "^7.6.0",
+    "@electron-forge/maker-rpm": "^7.6.0",
+    "@electron-forge/maker-squirrel": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
+    "@iconify/svelte": "^4.2.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "postcss": "^8.4.49",
+    "svelte": "^5.16.1",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "webmidi": "^3.1.12"
+  }
+}
