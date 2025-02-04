@@ -26,3 +26,12 @@
   font-style: italic;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
