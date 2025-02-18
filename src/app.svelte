@@ -103,7 +103,7 @@
   //       }
   //     }
   //     currentChordName = "";
-  //   };
+  //   }
 
   WebMidi.enable({
     sysex: true,
