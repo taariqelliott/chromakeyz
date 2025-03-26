@@ -88,23 +88,6 @@
     currentChordName = "";
   };
 
-  // const updateCurrentChordName = () => {
-  //     const activeNotesArray = Array.from(currentChordMap.keys());
-  //     const chordTypes = ["eleventh", "ninth", "seventh", "triads"];
-  //     for (const type of chordTypes) {
-  //       for (const chord of cmajor["C Major"][type]) {
-  //         if (
-  //           chord.notes.length === activeNotesArray.length &&
-  //           chord.notes.every((note) => activeNotesArray.includes(note))
-  //         ) {
-  //           currentChordName = chord.name;
-  //           return;
-  //         }
-  //       }
-  //     }
-  //     currentChordName = "";
-  //   }
-
   WebMidi.enable({
     sysex: true,
     callback: (err: Error | undefined) => {
